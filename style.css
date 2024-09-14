@@ -92,12 +92,15 @@ body::before {
     border-radius: 20px;
     overflow: hidden;
     transition: transform 0.3s ease-in-out;
+    /* Ensures both videos have the same width */
+    max-width: 50%; 
 }
 
 /* Video styling */
 video {
     width: 100%;
     height: auto;
+    aspect-ratio: 16 / 9; /* Ensures videos have a consistent aspect ratio */
     border-radius: 20px;
 }
 
@@ -133,6 +136,7 @@ body.loaded .video-container {
     }
 
     .video-wrapper {
+        max-width: 100%; /* Ensures videos take full width when stacked */
         margin-bottom: 20px; /* Adds space between videos when stacked */
     }
 }
