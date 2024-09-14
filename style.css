@@ -99,7 +99,7 @@ body::before {
 /* Video styling */
 video {
     width: 100%;
-    height: 350px;
+    height: initial;
     aspect-ratio: 16 / 9; /* Ensures videos have a consistent aspect ratio */
     border-radius: 20px;
 }
