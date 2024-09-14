@@ -1,19 +1,118 @@
+/* Body styling */
 body {
     margin: 0;
     padding: 0;
+    font-family: 'Poppins', sans-serif; /* Modern font */
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #000;
+    background: linear-gradient(135deg, #1f1c2c, #928DAB); /* Gradient background */
+    color: #fff;
+    overflow: hidden;
 }
 
+/* Header styling */
+header {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+}
+
+/* Logo container styling */
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+/* Logo styling */
+.logo {
+    width: 50px; /* Adjust as needed */
+    height: auto;
+    margin-right: 10px;
+}
+
+/* Brand name styling */
+.brand-name {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #fff;
+    margin: 0;
+}
+
+/* Parallax effect for background */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 10%, transparent 80%);
+    animation: moveBackground 15s linear infinite;
+    z-index: -1; /* Ensures the background effect stays behind everything */
+}
+
+@keyframes moveBackground {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* Frosted glass effect on video container */
 .video-container {
+    position: relative;
     max-width: 80%;
     max-height: 80%;
+    background: rgba(255, 255, 255, 0.1); /* Transparent white for glass effect */
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7); /* Strong shadow */
+    border-radius: 20px;
+    overflow: hidden;
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    opacity: 0;
+    transform: scale(0.8);
+    transition: all 0.6s ease-in-out;
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Light border to enhance glass look */
 }
 
+/* Soft glow effect on hover */
+.video-container:hover {
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.3); /* Soft glow */
+    transform: scale(1.05); /* Slight zoom */
+    transition: all 0.5s ease-in-out;
+}
+
+/* Video styling */
 video {
     width: 100%;
     height: auto;
+    border-radius: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Advanced hover effect on video */
+video:hover {
+    transform: scale(1.02) rotate(1deg); /* Subtle zoom and slight rotation */
+}
+
+/* On page load, the video container smoothly appears */
+body.loaded .video-container {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Custom scrollbar styling */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2); 
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
 }
