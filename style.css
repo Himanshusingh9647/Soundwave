@@ -63,13 +63,15 @@ body::before {
 
 /* Frosted glass effect on video container */
 .video-container {
+    display: flex; /* Allows videos to be placed side by side */
+    gap: 20px; /* Adds space between the two videos */
     position: relative;
     max-width: 80%;
     max-height: 80%;
     background: rgba(255, 255, 255, 0.1); /* Transparent white for glass effect */
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7); /* Strong shadow */
     border-radius: 20px;
-    overflow: hidden;
+    padding: 20px;
     backdrop-filter: blur(10px); /* Frosted glass effect */
     opacity: 0;
     transform: scale(0.8);
@@ -84,12 +86,19 @@ body::before {
     transition: all 0.5s ease-in-out;
 }
 
+/* Each video wrapper to contain the individual video */
+.video-wrapper {
+    flex: 1;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
 /* Video styling */
 video {
     width: 100%;
     height: auto;
     border-radius: 20px;
-    transition: transform 0.3s ease-in-out;
 }
 
 /* Advanced hover effect on video */
@@ -115,4 +124,15 @@ body.loaded .video-container {
 
 ::-webkit-scrollbar-track {
     background: rgba(0, 0, 0, 0.1);
+}
+
+/* Media query to ensure responsiveness on smaller screens */
+@media (max-width: 768px) {
+    .video-container {
+        flex-direction: column; /* Stacks videos on top of each other on smaller screens */
+    }
+
+    .video-wrapper {
+        margin-bottom: 20px; /* Adds space between videos when stacked */
+    }
 }
