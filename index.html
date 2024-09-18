@@ -3,31 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enhanced Video Page</title>
+    <title>Song Library</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <!-- Header -->
     <header>
         <div class="logo-container">
             <img src="download.png" alt="Himanshu Logo" class="logo">
             <h1 class="brand-name">HIMANSHU</h1>
         </div>
     </header>
-    <div class="video-container">
-        <div class="video-wrapper">
-            <video id="video1" autoplay controls>
-                <source src="Anuv Jain - Alag Aasmaan (Acoustic).mp4" type="video/mp4">
-                Your browser does not support HTML5 video.
-            </video>
-        </div>
-        <div class="video-wrapper">
-            <video id="video2" autoplay controls>
-                <source src="Anuv Jain - GUL (Studio).mp4" type="video/mp4">
-                Your browser does not support HTML5 video.
-            </video>
+
+    <!-- Song Library Section -->
+    <div class="song-library">
+        <h2>Song Library</h2>
+        <div class="song-grid">
+            <!-- Song 1 -->
+            <div class="song-card" data-video="Anuv Jain - Alag Aasmaan (Acoustic).mp4">
+                <img src="Th1.jpg" alt="Alag Aasmaan" class="thumbnail">
+                <div class="song-info">
+                    <h3>Alag Aasmaan</h3>
+                    <button class="play-button">Play</button>
+                </div>
+            </div>
+
+            <!-- Song 2 -->
+            <div class="song-card" data-video="Anuv Jain - GUL (Studio).mp4">
+                <img src="Th2.jpg" alt="GUL" class="thumbnail">
+                <div class="song-info">
+                    <h3>Gul</h3>
+                    <button class="play-button">Play</button>
+                </div>
+            </div>
+
+            <div class="song-card" data-video="Anuv Jain - JO TUM MERE HO (Official Video).mp4">
+                <img src="Th3.jpg" alt="JO TUM MERE HO" class="thumbnail">
+                <div class="song-info">
+                    <h3>Gul</h3>
+                    <button class="play-button">Play</button>
+                </div>
+            </div>
+
+            <div class="song-card" data-video="Tujhe Bhula Diya.mp4">
+                <img src="Th4.jpg" alt="Tujhe Bhula Diya" class="thumbnail">
+                <div class="song-info">
+                    <h3>Gul</h3>
+                    <button class="play-button">Play</button>
+                </div>
+            </div>
+
+
+            <div class="song-card" data-video="Anuv Jain - GUL (Studio).mp4">
+                <img src="Th2.jpg" alt="GUL" class="thumbnail">
+                <div class="song-info">
+                    <h3>Gul</h3>
+                    <button class="play-button">Play</button>
+                </div>
+            </div>
+
+
+            <!-- Add more songs similarly -->
+            <div class="song-card" data-video="song3.mp4">
+                <img src="Th3.jpg" alt="Song 3" class="thumbnail">
+                <div class="song-info">
+                    <h3>Song Title 3</h3>
+                    <button class="play-button">Play</button>
+                </div>
+            </div>
         </div>
     </div>
+
+    <!-- JavaScript file -->
     <script src="script.js"></script>
 </body>
 </html>
