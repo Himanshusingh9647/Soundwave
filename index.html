@@ -15,6 +15,10 @@
             <img src="download.png" alt="Himanshu Logo" class="logo">
             <h1 class="brand-name">HIMANSHU</h1>
         </div>
+        <div class="search-bar-container">
+            <input type="text" id="search-input" placeholder="Search songs...">
+            <button id="search-button">Search</button>
+        </div>
     </header>
 
     <!-- Song Library Section -->
@@ -39,40 +43,50 @@
                 </div>
             </div>
 
-            <div class="song-card" data-video="Anuv Jain - JO TUM MERE HO (Official Video).mp4">
-                <img src="Th3.jpg" alt="JO TUM MERE HO" class="thumbnail">
-                <div class="song-info">
-                    <h3>JO TUM MERE HO</h3>
-                    <button class="play-button">Play</button>
-                </div>
-            </div>
-
-            <div class="song-card" data-video="Tujhe Bhula Diya.mp4">
-                <img src="Th4.jpg" alt="Tujhe Bhula Diya" class="thumbnail">
-                <div class="song-info">
-                    <h3>Tujhe Bhula Diya</h3>
-                    <button class="play-button">Play</button>
-                </div>
-            </div>
-
-
-            <div class="song-card" data-video="Jiyein Kyun.mp4">
-                <img src="Th5.jpg" alt="Jiyein Kyun" class="thumbnail">
-                <div class="song-info">
-                    <h3>Jiyein Kyun</h3>
-                    <button class="play-button">Play</button>
-                </div>
-            </div>
-
-
             <!-- Add more songs similarly -->
-            <div class="song-card" data-video="song3.mp4">
-                <img src="Th3.jpg" alt="Song 3" class="thumbnail">
-                <div class="song-info">
-                    <h3>Song Title 3</h3>
-                    <button class="play-button">Play</button>
-                </div>
-            </div>
+           <div class="song-card" data-video="Anuv Jain - JO TUM MERE HO (Official Video).mp4">
+    <img src="Th3.jpg" alt="JO TUM MERE HO" class="thumbnail">
+    <div class="song-info">
+        <h3>JO TUM MERE HO</h3>
+        <button class="play-button">Play</button>
+    </div>
+</div>
+
+<div class="song-card" data-video="Tujhe Bhula Diya.mp4">
+    <img src="Th4.jpg" alt="Tujhe Bhula Diya" class="thumbnail">
+    <div class="song-info">
+        <h3>Tujhe Bhula Diya</h3>
+        <button class="play-button">Play</button>
+    </div>
+</div>
+
+
+<div class="song-card" data-video="Jiyein Kyun.mp4">
+    <img src="Th5.jpg" alt="Jiyein Kyun" class="thumbnail">
+    <div class="song-info">
+        <h3>Jiyein Kyun</h3>
+        <button class="play-button">Play</button>
+    </div>
+</div>
+
+
+<!-- Add more songs similarly -->
+<div class="song-card" data-video="song3.mp4">
+    <img src="Th3.jpg" alt="Song 3" class="thumbnail">
+    <div class="song-info">
+        <h3>Song Title 3</h3>
+        <button class="play-button">Play</button>
+    </div>
+</div>
+</div>
+</div>
+
+
+    <!-- Video Player Modal -->
+    <div class="video-modal" style="display: none;">
+        <button class="close-button">&times;</button>
+        <div class="video-modal-content">
+            <video id="video-player" src="" controls></video>
         </div>
     </div>
 
@@ -80,3 +94,4 @@
     <script src="script.js"></script>
 </body>
 </html>
+
